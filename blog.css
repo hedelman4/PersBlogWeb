@@ -1,0 +1,106 @@
+.container {
+    display:grid;
+    width:100%;
+    height:100%;
+    margin:auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: minmax(100px,auto);
+    grid-gap: 50px;
+    grid-template-areas:
+    "head"
+    "topLeft"
+    "topMiddle"
+    "topRight"
+    "middleLeft"
+    "middleMiddle"
+    "middleRight"
+    "bottom";
+    justify-content:center;
+    border: 1px solid yellow;
+}
+
+.box {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+#header {
+    grid-area: head;
+    display: grid;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000080;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    grid-area: topLeft;
+    background-image: url('images/olympus.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#two {
+    grid-area: topMiddle;
+    background-image: url('images/crystal.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#three {
+    grid-area: topRight;
+    background-image: url('images/katahdin.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#four {
+    grid-area: middleLeft;
+    background-image: url('images/kilimanjaro.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#five {
+    grid-area: middleMiddle;
+    background-image: url('images/rainier.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#six {
+    grid-area: middleRight;
+    background-image: url('images/whitney.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#seven {
+    grid-area: bottom;
+}
+
+@media(min-width:900px){
+.container {
+    display:grid;
+    width:100%;
+    height:100%;
+    margin:auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: minmax(100px,auto);
+    grid-gap: 50px;
+    grid-template-areas:
+    "head head head"
+    "topLeft topMiddle topRight"
+    "middleLeft middleMiddle middleRight"
+    "bottom bottom bottom";
+    justify-content:center;
+    border: 1px solid yellow;
+}
