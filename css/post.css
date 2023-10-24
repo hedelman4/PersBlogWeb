@@ -32,3 +32,11 @@
 #postone {
     grid-area: content;
 }
+
+p {
+    color: black;
+}
+
+img {
+    max-width: 100%
+}
